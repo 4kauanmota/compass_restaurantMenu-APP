@@ -1,3 +1,4 @@
+import Restaurant from "@/models/Restaurant";
 import axios from "axios";
 
 const URL = "https://8jcox47hg2.execute-api.us-east-2.amazonaws.com/dev";
@@ -8,13 +9,13 @@ export async function fetchData() {
   return response;
 }
 
-export async function fetchRestaurants() {
+export async function fetchRestaurants(): Promise<Array<object>> {
   const response = await axios.get(URL);
   const result = response.data.body.restaurants;
 
-  const restaurants = [];
+  const restaurants: Array<object> = [];
 
-  result.map((restaurant) => {
+  result.map((restaurant: Restaurant) => {
     const restaurantObj = {
       name: restaurant.name,
       coverImageUrl: restaurant.coverImageUrl,
@@ -26,11 +27,11 @@ export async function fetchRestaurants() {
   return restaurants;
 }
 
-export async function fetchMenu(id) {
+export async function fetchRestaurant(id: number): Promise<Restaurant> {
   const response = await axios.get(URL);
   const result = await response.data.body.restaurants;
 
-  const restaurant = result.filter((restaurant) => restaurant.id == id);
+  const restaurant: Restaurant = result.filter((restaurant: Restaurant) => restaurant.id === id);
 
   return restaurant;
 }
