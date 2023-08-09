@@ -17,6 +17,7 @@ export async function fetchRestaurants(): Promise<Array<object>> {
 
   data.map((restaurant: Restaurant) => {
     const restaurantObj = {
+      id: restaurant.id,
       name: restaurant.name,
       coverImageUrl: restaurant.coverImageUrl,
     };
