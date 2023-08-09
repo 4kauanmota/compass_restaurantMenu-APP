@@ -28,3 +28,12 @@ export async function fetchRestaurants() {
 
   return restaurants;
 }
+
+export async function fetchMenu(id) {
+  const response = await axios.get(URL);
+  const result = await response.data.body.restaurants;
+
+  const restaurant = result.filter((restaurant) => restaurant.id == id);
+
+  return restaurant;
+}
