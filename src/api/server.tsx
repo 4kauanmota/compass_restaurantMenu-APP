@@ -31,7 +31,7 @@ export async function fetchRestaurant(id: number): Promise<Restaurant> {
   const response = await axios.get(API);
   const data = await response.data.body.restaurants;
 
-  const restaurant: Restaurant = data.filter((restaurant: Restaurant) => restaurant.id === id);
+  const restaurant: Array<Restaurant> = data.filter((restaurant: Restaurant) => restaurant.id === id);
 
-  return restaurant;
+  return restaurant[0];
 }
