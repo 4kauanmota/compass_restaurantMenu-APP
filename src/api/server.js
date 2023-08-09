@@ -16,11 +16,8 @@ export async function fetchRestaurants() {
 
   result.map((restaurant) => {
     const restaurantObj = {
-      id: restaurant.id,
       name: restaurant.name,
-      description: restaurant.description,
       coverImageUrl: restaurant.coverImageUrl,
-      rating: restaurant.rating,
     };
 
     restaurants.push(restaurantObj);
