@@ -10,7 +10,13 @@ function StackNavigation() {
     <Stack.Navigator>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Restaurant" component={Restaurant} />
-      <Stack.Screen name="RestaurantDetails" component={RestaurantDetails} />
+      <Stack.Screen
+        options={{
+          title: '',
+          headerShown: false,
+          headerTransparent: true,
+        }}
+      name="RestaurantDetails" component={RestaurantDetails} />
     </Stack.Navigator>
   )
 }

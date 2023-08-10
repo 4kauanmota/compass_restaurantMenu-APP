@@ -1,9 +1,22 @@
-import { Text } from "react-native";
+import {
+  ScrollView,
+  StyleSheet
+} from "react-native";
 
-function RestaurantDetails() {
-  return(
-    <Text> Restaurant Details </Text>
+import RestaurantBanner from "@/components/molecule/RestaurantBanner";
+import MenuList from "@/components/organism/MenuList";
+import RestaurantDescription from "@/components/molecule/RestaurantDescription";
+
+
+export default function RestaurantDetails() {
+  return (
+    <ScrollView style={styles.container}>
+    </ScrollView>
   );
 }
 
-export default RestaurantDetails;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
+});
