@@ -2,15 +2,20 @@ import React, { useEffect, useState } from "react";
 import { View, FlatList } from "react-native";
 import { fetchRestaurants } from "@/api/server";
 import RestaurantsComponents from "@/Components/RestaurantsComponents";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "@/navigation/StackNavigation";
 
-interface Restaurant {
+export interface Restaurant {
   id: number;
   name: string;
   coverImageUrl: string;
 }
 
-const RestaurantsScreen: React.FC = () => {
+type DetailScreenRouteProp = NativeStackScreenProps<RootStackParamList, 'Restaurant'>;
+
+const RestaurantsScreen = ({navigation}:DetailScreenRouteProp) => {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
+
 
   useEffect(() => {
     async function loadRestaurants() {
@@ -26,7 +31,7 @@ const RestaurantsScreen: React.FC = () => {
       <FlatList
         data={restaurants}
         renderItem={({ item }) => (
-          <RestaurantsComponents title={item.name} imageUrl={item.coverImageUrl} />
+          <RestaurantsComponents restaurant={item} navigation={navigation} />
         )}
         keyExtractor={(item) => item.id.toString()}
         contentContainerStyle={{ alignItems: "center" }}

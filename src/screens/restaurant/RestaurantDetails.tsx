@@ -1,8 +1,18 @@
 import { Text } from "react-native";
 
-function RestaurantDetails() {
+import {  NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from "@/navigation/StackNavigation";
+
+
+
+type DetailScreenRouteProp = NativeStackScreenProps<RootStackParamList, 'RestaurantDetails'>;
+
+
+function RestaurantDetails({ route }: DetailScreenRouteProp) {
+const {params} = route;
+
   return(
-    <Text> Restaurant Details </Text>
+    <Text> Restaurant Details {params.id} </Text>
   );
 }
 

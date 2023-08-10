@@ -1,21 +1,31 @@
 import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity, Platform  } from "react-native";
+import { Restaurant } from "@/screens/restaurant/Restaurants";
+import { StackNavigationProp,  } from "@react-navigation/stack";
+import { RootStackParamList } from "@/navigation/StackNavigation";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 interface RestaurantCardProps {
-    title: string;
-    imageUrl: string;
+    restaurant: Restaurant,
+    navigation: NativeStackNavigationProp<RootStackParamList, "Restaurant">
 }
 
 
-const RestaurantsComponents: React.FC<RestaurantCardProps> = ({ title, imageUrl }) => {
+const RestaurantsComponents = ({ restaurant, navigation }:RestaurantCardProps) => {
+    const {  coverImageUrl,id,name} = restaurant;
     return (
         <TouchableOpacity
             activeOpacity={0.6}
             style={styles.cardContainer}
+            onPress={() => {
+                navigation.navigate("RestaurantDetails", {
+                    id
+                })
+            }}
         >
             <View style={styles.card}>
-                <Image source={{ uri: imageUrl }} style={styles.cardImage} />
-                <Text style={styles.cardTitle}>{title}</Text>
+                <Image source={{ uri: coverImageUrl }} style={styles.cardImage} />
+                <Text style={styles.cardTitle}>{name}</Text>
             </View>
         </TouchableOpacity>
     );

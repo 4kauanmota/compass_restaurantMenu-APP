@@ -3,7 +3,13 @@ import Home from "../screens/Home";
 import Restaurant from "@/screens/restaurant/Restaurants";
 import RestaurantDetails from "@/screens/restaurant/RestaurantDetails";
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  Home: undefined;
+  Restaurant: undefined;
+  RestaurantDetails: { id: number };
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function StackNavigation() {
   return (
