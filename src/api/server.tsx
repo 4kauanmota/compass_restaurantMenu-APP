@@ -9,20 +9,15 @@ export async function fetchData() {
   return response;
 }
 
-export async function fetchRestaurants(): Promise<Array<object>> {
+export async function fetchRestaurants(): Promise<Restaurant[]> {
   const response = await axios.get(API);
   const data = response.data.body.restaurants;
 
-  const restaurants: Array<object> = [];
-
-  data.map((restaurant: Restaurant) => {
-    const restaurantObj = {
-      name: restaurant.name,
-      coverImageUrl: restaurant.coverImageUrl,
-    };
-
-    restaurants.push(restaurantObj);
-  });
+  const restaurants: Restaurant[] = data.map((restaurant: Restaurant) => ({
+    id: restaurant.id,
+    name: restaurant.name,
+    coverImageUrl: restaurant.coverImageUrl,
+  }));
 
   return restaurants;
 }
