@@ -33,11 +33,11 @@ export default function RestaurantDetails({ navigation }: { navigation: any }) {
               Churrascaria Barranco
             </Text>
             <View style={styles.star}>
-            <Image  source={require("../../img/star.png")} />
-            <Image  source={require("../../img/star.png")} />
-            <Image  source={require("../../img/star.png")} />
-            <Image  source={require("../../img/star.png")} />
-            <Image  source={require("../../img/star.png")} />
+            <Image id="star1" source={require("../../img/star.png")} />
+            <Image id="star2" source={require("../../img/star.png")} />
+            <Image id="star3" source={require("../../img/star.png")} />
+            <Image id="star4" source={require("../../img/star.png")} />
+            <Image style={styles.star5} id="star5" source={require("../../img/star.png")} />
             </View>
           </View>
         </ImageBackground>
@@ -167,12 +167,12 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    width: 140,
+    width: 170,
     height: 152,
     overflow: "hidden",
     backgroundColor: "#999999",
     borderRadius: 12,
-    margin: 15,
+    margin: 6,
   },
 
   textCard: {
@@ -193,6 +193,10 @@ const styles = StyleSheet.create({
     color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
+  },
+
+  star5:{
+    opacity: 0.2,
   },
 
   textcolor: {
