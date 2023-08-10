@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, FlatList } from "react-native";
 import { fetchRestaurants } from "@/api/server";
-import RestaurantsComponents from "@/Components/RestaurantsComponents";
+import RestaurantsComponents from "@/components/RestaurantsComponents";
 
 interface Restaurant {
   id: number;
@@ -22,7 +22,7 @@ const RestaurantsScreen: React.FC = () => {
   }, []);
 
   return (
-    <View>
+    <View style={{backgroundColor: '#9e9e9e'}}>
       <FlatList
         data={restaurants}
         renderItem={({ item }) => (

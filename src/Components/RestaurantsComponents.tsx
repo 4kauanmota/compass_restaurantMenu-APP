@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         justifyContent: 'center',
         alignItems: 'center',
+        position: 'relative',
     },
     cardImage: {
         width: 300,
@@ -49,6 +50,9 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         marginLeft: 5,
+        position: 'absolute',
+        bottom: 30,
+        left: 20,
     },
 });
 
