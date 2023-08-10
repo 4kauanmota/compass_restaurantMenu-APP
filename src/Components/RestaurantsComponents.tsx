@@ -9,10 +9,8 @@ interface RestaurantCardProps {
 const RestaurantsComponents: React.FC<RestaurantCardProps> = ({ title, imageUrl }) => {
     return (
     <View style={styles.cardContainer}>
-        <View  style={styles.innerContainer}>
             <Image source={{ uri: imageUrl }} style={styles.cardImage} />
             <Text style={styles.cardTitle}>{title}</Text>
-        </View>
     </View>
     );
 };
@@ -20,11 +18,11 @@ const RestaurantsComponents: React.FC<RestaurantCardProps> = ({ title, imageUrl 
 const styles = StyleSheet.create({
     cardContainer: {
         margin: 15,
-        marginLeft: 20,
-        marginRight: 20,
+        marginLeft: 25,
+        marginRight: 25,
         height: 150,
         elevation: 4,
-        shadowColor: 'blach',
+        shadowColor: 'black',
         shadowOpacity: 0.25,
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 8,
@@ -32,27 +30,21 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         //overflow: Platform.OS === 'android' ? 'hidden': 'visible',
     },
-    innerContainer: {
-        padding: 16,
-        borderRadius: 12,
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'relative',
-    },
     cardImage: {
-        width: 300,
-        height: 100,
+        width: 370,
+        height: 150,
         borderRadius: 8,
+        opacity: 0.75,
     },
     cardTitle: {
         color: "#fff",
-        fontSize: 16,
+        fontSize: 32,
         fontWeight: "bold",
-        textAlign: "center",
-        marginLeft: 5,
         position: 'absolute',
-        bottom: 30,
-        left: 20,
+        bottom: 24,
+        left: 39,
+        right: 160,
+        textAlign: "left",
     },
 });
 

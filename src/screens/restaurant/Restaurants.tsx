@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, FlatList } from "react-native";
 import { fetchRestaurants } from "@/api/server";
-import RestaurantsComponents from "@/components/RestaurantsComponents";
+import RestaurantsComponents from "@/Components/RestaurantsComponents";
 
 interface Restaurant {
   id: number;
