@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity, Platform  } from "react-native";
 import Restaurant from "@/models/Restaurant";
 import { RootStackParamList } from "@/navigation/StackNavigation";
@@ -11,7 +10,7 @@ interface RestaurantCardProps {
 }
 
 
-const RestaurantsComponents = ({ restaurant, navigation }:RestaurantCardProps) => {
+const RestaurantCard = ({ restaurant, navigation }:RestaurantCardProps) => {
     const {  coverImageUrl,id,name} = restaurant;
     return (
         <TouchableOpacity
@@ -35,8 +34,8 @@ const styles = StyleSheet.create({
     cardContainer: {
         marginLeft: 20,
         marginRight: 20,
-        marginTop: 20,
-        marginBottom: 5,
+        marginTop: 15,
+        marginBottom: 15,
         height: 150,
         flexDirection: 'row',
         justifyContent: 'center',
@@ -86,4 +85,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default RestaurantsComponents;
+export default RestaurantCard;

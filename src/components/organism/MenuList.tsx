@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
   menuList: {
     gap: 20,
-    marginBottom: 10,
+    marginBottom: 15,
   },
 });
 

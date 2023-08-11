@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
 
   cardTextContainer: {
     height: "23%",
+    paddingTop: 2,
   },
 
   cardText: {
