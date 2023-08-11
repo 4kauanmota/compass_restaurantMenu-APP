@@ -19,14 +19,14 @@ const styles = StyleSheet.create({
     width: "45%",
     height: 164,
     overflow: "hidden",
-    backgroundColor: "#999999",
+    backgroundColor: "#4f4f54",
     borderRadius: 12,
     marginRight: 18,
   },
 
   cardImageContainer: {
     overflow: "hidden",
-    height: "70%",
+    height: "67%",
   },
 
   cardImage: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
 
   cardTextContainer: {
-    height: "18%",
+    height: "23%",
     justifyContent: "flex-start",
   },
 
