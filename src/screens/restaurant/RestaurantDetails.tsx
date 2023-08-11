@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
 
   detailsArea: {
-    width: "94%",
+    width: "91%",
   },
 });
 
