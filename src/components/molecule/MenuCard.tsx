@@ -42,12 +42,13 @@ const styles = StyleSheet.create({
   },
 
   cardText: {
-    color: "#ffffff",
     paddingLeft: 10,
     paddingTop: 5,
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: "700",
     textAlignVertical: "top",
+    fontFamily: "Poppins",
+    color: "#ffffff",
   },
 });
 

@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 32,
     fontWeight: "700",
+    fontFamily: "Poppins",
     color: "#ffffff",
-    textAlign: "left",
   },
 });
 

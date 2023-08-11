@@ -1,6 +1,19 @@
+import { useCallback } from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 
 function Description({ children }: { children: any }) {
+  const [fontsLoaded] = useFonts({
+    Poppins: require("../../../assets/font/Poppins-Regular.ttf"),
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
   return (
     <View>
       <Text style={styles.text}>{children}</Text>
@@ -15,6 +28,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "400",
     color: "#ffffff",
+    fontFamily: "Poppins",
   },
 });
 

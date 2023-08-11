@@ -1,6 +1,5 @@
-import { StyleSheet, View, Pressable, Image } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { useEffect, useState } from "react";
-import { Feather } from "@expo/vector-icons";
 
 import RestaurantBanner from "@/components/molecule/RestaurantBanner";
 import MenuList from "@/components/organism/MenuList";
@@ -9,25 +8,7 @@ import { fetchRestaurant } from "@/api/server";
 import Restaurant from "@/models/Restaurant";
 import VirtualizedList from "@/components/organism/VirtualizedList";
 
-function RestaurantDetails({
-  navigation,
-  route,
-}: {
-  navigation: any;
-  route: any;
-}) {
-  const goBackHandler = () => {
-    navigation.goBack();
-  };
-
-  navigation.setOptions({
-    headerLeft: () => (
-      <Pressable onPress={goBackHandler}>
-        <Feather name="chevron-left" size={30} color="white" />
-      </Pressable>
-    ),
-  });
-
+function RestaurantDetails({ route }: { route: any }) {
   const [restaurant, setRestaurant] = useState<Restaurant>();
 
   useEffect(() => {
@@ -39,7 +20,7 @@ function RestaurantDetails({
     }
 
     restaurantHandler();
-  }, []);
+  }, [route]);
 
   return (
     <VirtualizedList style={styles.container}>

@@ -22,13 +22,7 @@ function RestaurantBanner({
             <Title>{title}</Title>
           </View>
 
-          <View style={styles.stars}>
-            <Image id="star1" source={require("../../img/star.png")} />
-            <Image id="star2" source={require("../../img/star.png")} />
-            <Image id="star3" source={require("../../img/star.png")} />
-            <Image id="star4" source={require("../../img/star.png")} />
-            <Image id="star5" source={require("../../img/star.png")} />
-          </View>
+          <View style={styles.stars}></View>
         </View>
       </ImageBackground>
     </View>
@@ -57,9 +51,6 @@ const styles = StyleSheet.create({
   },
 
   restaurantName: {
-    color: "#ffffff",
-    fontSize: 25,
-    fontWeight: "bold",
     width: "90%",
   },
 
