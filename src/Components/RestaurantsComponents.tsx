@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
         left: 14,
         right: 80,
         textAlign: "left",
+        fontFamily: 'Poppins'
     },
 });
 
