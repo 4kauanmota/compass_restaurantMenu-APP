@@ -17,7 +17,6 @@ function StackNavigation() {
       <Stack.Screen
         options={{
           title: "",
-          headerShown: false,
           headerTransparent: true,
         }}
         name="RestaurantDetails"

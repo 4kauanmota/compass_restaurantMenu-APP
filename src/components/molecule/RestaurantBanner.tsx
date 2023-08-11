@@ -1,12 +1,5 @@
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableWithoutFeedback,
-  StyleSheet,
-} from "react-native";
+import { View, Image, ImageBackground, StyleSheet } from "react-native";
 import Title from "@/components/atoms/Title";
-import { useNavigation } from "@react-navigation/native";
 
 function RestaurantBanner({
   image,
@@ -17,12 +10,6 @@ function RestaurantBanner({
   title: any;
   rating: any;
 }) {
-  const navigation = useNavigation();
-
-  const goBackHandler = () => {
-    navigation.goBack();
-  };
-
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -30,12 +17,6 @@ function RestaurantBanner({
         resizeMode="cover"
         source={{ uri: image }}
       >
-        {/* <View style={styles.goBackButton}>
-          <TouchableWithoutFeedback onPress={goBackHandler}>
-            <Image source={require("../../img/Vector.png")} />
-          </TouchableWithoutFeedback>
-        </View> */}
-
         <View style={styles.informationsContainer}>
           <View style={styles.restaurantName}>
             <Title>{title}</Title>
@@ -66,11 +47,6 @@ const styles = StyleSheet.create({
     height: "100%",
     borderBottomEndRadius: 20,
     borderBottomStartRadius: 20,
-  },
-
-  goBackButton: {
-    marginTop: 60,
-    paddingLeft: 30,
   },
 
   informationsContainer: {
