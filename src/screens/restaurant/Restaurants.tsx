@@ -4,7 +4,7 @@ function Restaurant({ navigation }: { navigation: any }) {
   return (
     <Button
       title="Details"
-      onPress={() => navigation.navigate("RestaurantDetails", { id: 2 })}
+      onPress={() => navigation.navigate("RestaurantDetails", { id: 3 })}
     />
   );
 }

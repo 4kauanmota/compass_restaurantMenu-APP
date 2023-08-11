@@ -1,5 +1,5 @@
 import colors from "@/constants/colors";
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet, Platform } from "react-native";
 
 function MenuCard({ image, text }: { image: string; text: string }) {
   return (
@@ -23,6 +23,17 @@ const styles = StyleSheet.create({
     backgroundColor: colors.strongWhite,
     borderRadius: 12,
     marginRight: 18,
+    ...Platform.select({
+      ios: {
+        shadowColor: "black",
+        shadowOpacity: 0.25,
+        shadowOffset: { width: 0, height: 2 },
+        shadowRadius: 8,
+      },
+      android: {
+        elevation: 4,
+      },
+    }),
   },
 
   cardImageContainer: {

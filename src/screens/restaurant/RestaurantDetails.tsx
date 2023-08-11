@@ -22,6 +22,8 @@ function RestaurantDetails({ route }: { route: any }) {
     restaurantHandler();
   }, [route]);
 
+  if (!restaurant) return null;
+
   return (
     <VirtualizedList style={styles.container}>
       <RestaurantBanner
