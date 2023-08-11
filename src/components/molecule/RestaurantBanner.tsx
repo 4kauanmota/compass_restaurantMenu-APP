@@ -1,4 +1,4 @@
-import { View, Image, ImageBackground, StyleSheet } from "react-native";
+import { View, ImageBackground, StyleSheet, Platform } from "react-native";
 import Title from "@/components/atoms/Title";
 
 function RestaurantBanner({
@@ -41,6 +41,17 @@ const styles = StyleSheet.create({
     height: "100%",
     borderBottomEndRadius: 20,
     borderBottomStartRadius: 20,
+    ...Platform.select({
+      ios: {
+        shadowColor: "black",
+        shadowOpacity: 0.25,
+        shadowOffset: { width: 0, height: 2 },
+        shadowRadius: 8,
+      },
+      android: {
+        elevation: 4,
+      },
+    }),
   },
 
   informationsContainer: {

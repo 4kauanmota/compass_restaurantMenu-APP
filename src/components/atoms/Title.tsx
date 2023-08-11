@@ -1,3 +1,4 @@
+import colors from "@/constants/colors";
 import { Text, View, StyleSheet } from "react-native";
 
 function Title({ children }: { children: any }) {
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "700",
     fontFamily: "Poppins",
-    color: "#ffffff",
+    color: colors.white,
   },
 });
 

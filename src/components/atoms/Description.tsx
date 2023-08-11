@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import colors from "@/constants/colors";
 
 function Description({ children }: { children: any }) {
   const [fontsLoaded] = useFonts({
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 14,
     fontWeight: "400",
-    color: "#ffffff",
+    color: colors.white,
     fontFamily: "Poppins",
   },
 });

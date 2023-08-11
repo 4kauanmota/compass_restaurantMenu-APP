@@ -1,3 +1,4 @@
+import colors from "@/constants/colors";
 import { Text, View, Image, StyleSheet } from "react-native";
 
 function MenuCard({ image, text }: { image: string; text: string }) {
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     width: "45%",
     height: 164,
     overflow: "hidden",
-    backgroundColor: "#4f4f54",
+    backgroundColor: colors.strongWhite,
     borderRadius: 12,
     marginRight: 18,
   },
@@ -33,12 +34,11 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
 
-    borderRadius: 5,
+    borderRadius: 12,
   },
 
   cardTextContainer: {
     height: "23%",
-    justifyContent: "flex-start",
   },
 
   cardText: {
@@ -46,9 +46,8 @@ const styles = StyleSheet.create({
     paddingTop: 5,
     fontSize: 14,
     fontWeight: "700",
-    textAlignVertical: "top",
     fontFamily: "Poppins",
-    color: "#ffffff",
+    color: colors.white,
   },
 });
 

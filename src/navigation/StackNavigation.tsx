@@ -5,6 +5,7 @@ import Home from "../screens/Home";
 import Restaurant from "@/screens/restaurant/Restaurants";
 import RestaurantDetails from "@/screens/restaurant/RestaurantDetails";
 import PressArea from "@/components/molecule/PressArea";
+import colors from "@/constants/colors";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +13,7 @@ function StackNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{
-        contentStyle: { backgroundColor: "#2c2c2e" },
+        contentStyle: { backgroundColor: colors.gray },
       }}
     >
       <Stack.Screen name="Home" component={Home} />
@@ -26,7 +27,7 @@ function StackNavigation() {
               onPress={() => navigation.goBack()}
               style={{ borderRadius: 50 }}
             >
-              <Feather name="chevron-left" size={30} color="white" />
+              <Feather name="chevron-left" size={30} color={colors.white} />
             </PressArea>
           ),
         })}
