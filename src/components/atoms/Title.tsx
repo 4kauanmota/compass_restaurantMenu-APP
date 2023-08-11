@@ -3,20 +3,20 @@ import { Text, View, StyleSheet } from "react-native";
 function Title({ children }: { children: any }) {
   return (
     <View>
-      <Text style={styles.text}>{ children }</Text>
+      <Text style={styles.text}>{children}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-
-  },
+  container: {},
 
   text: {
     fontSize: 32,
-    color: '#ffffff'
-  }
-})
+    fontWeight: "700",
+    color: "#ffffff",
+    textAlign: "left",
+  },
+});
 
 export default Title;

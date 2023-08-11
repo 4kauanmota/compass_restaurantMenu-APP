@@ -3,20 +3,19 @@ import { Text, View, StyleSheet } from "react-native";
 function Description({ children }: { children: any }) {
   return (
     <View>
-      <Text style={styles.text}>{ children }</Text>
+      <Text style={styles.text}>{children}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-
-  },
+  container: {},
 
   text: {
     fontSize: 14,
-    color: '#ffffff'
-  }
-})
+    fontWeight: "400",
+    color: "#ffffff",
+  },
+});
 
 export default Description;

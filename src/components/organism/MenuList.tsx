@@ -1,20 +1,33 @@
 import SubTitle from "../atoms/SubTitle";
-import {
-  View,
-  FlatList
-} from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
 import MenuCard from "../molecule/MenuCard";
 
-function MenuList({menu}: {menu: any}) {
+function MenuList({ menu }: { menu: any }) {
   return (
-    <View>
+    <View style={styles.container}>
       <SubTitle>Menu</SubTitle>
-      <FlatList 
+
+      <FlatList
         data={menu}
-        renderItem={({item}) => <MenuCard image={item.imageUrl} text={item.title} />}
+        keyExtractor={(item) => item.title}
+        style={styles.menuList}
+        numColumns={2}
+        renderItem={({ item }) => (
+          <MenuCard image={item.imageUrl} text={item.title} />
+        )}
       />
     </View>
-  )
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  menuList: {
+    gap: 20,
+    marginBottom: 10,
+  },
+});
 
 export default MenuList;
