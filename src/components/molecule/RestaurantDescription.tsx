@@ -5,7 +5,7 @@ import {
 import SubTitle from "@/components/atoms/SubTitle";
 import Description from "@/components/atoms/Description";
 
-function RestaurantDescription({subTitle, description}: {subTitle: string, description: string}) {
+function RestaurantDescription({subTitle, description}: {subTitle: string, description: any}) {
   return (
     <View style={styles.container}>
       <SubTitle> { subTitle } </SubTitle>
@@ -18,7 +18,6 @@ function RestaurantDescription({subTitle, description}: {subTitle: string, descr
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2c2c2e",
   },
 });
 

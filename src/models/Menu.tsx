@@ -2,8 +2,8 @@ class Menu {
   private Title: string;
   private ImageUrl: string;
 
-  constructor(name: string, imageUrl: string) {
-    this.Title = name;
+  constructor(title: string, imageUrl: string) {
+    this.Title = title;
     this.ImageUrl = imageUrl;
   }
 

@@ -9,10 +9,10 @@ function MenuCard({image, text}: {image: string, text: string}) {
   return (
     <View style={styles.container}>
       <View style={styles.cardImage}>
-        <Image source={require(image)}></Image>
+        <Image style={{width: 200, height: '85%'}} source={{uri: image}}></Image>
       </View>
       <View>
-        <Text style={styles.cardText}>{ text }</Text>
+        <Text style={styles.cardText}>{text}</Text>
       </View>
     </View>
   )
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     fontSize: 15,
     fontWeight: "bold",
+    zIndex: 2,
   }
 })
 

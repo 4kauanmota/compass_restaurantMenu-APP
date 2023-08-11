@@ -9,7 +9,7 @@ import Title from "@/components/atoms/Title";
 import { useNavigation } from "@react-navigation/native";
 
 
-function RestaurantBanner({image, title, rating}: {image: string, title: string, rating: number}) {
+function RestaurantBanner({image, title, rating}: {image: any, title: any, rating: any}) {
   const navigation = useNavigation();
 
   const goBackHandler = () => {
@@ -20,7 +20,7 @@ function RestaurantBanner({image, title, rating}: {image: string, title: string,
     <ImageBackground
       style={styles.backgroundImage}
       resizeMode="cover"
-      source={require('../../img/fotoPerfil.png')}
+      source={{uri: image}}
     >
       <View style={styles.goBackButton}>
         <TouchableWithoutFeedback onPress={goBackHandler}>
