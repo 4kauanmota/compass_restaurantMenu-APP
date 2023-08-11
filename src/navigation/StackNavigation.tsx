@@ -7,7 +7,13 @@ import RestaurantDetails from "@/screens/restaurant/RestaurantDetails";
 import PressArea from "@/components/molecule/PressArea";
 import colors from "@/constants/colors";
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  Home: undefined;
+  Restaurant: undefined;
+  RestaurantDetails: { id: number };
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function StackNavigation() {
   return (
@@ -17,7 +23,15 @@ function StackNavigation() {
       }}
     >
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Restaurant" component={Restaurant} />
+      <Stack.Screen name="Restaurant" component={Restaurant} 
+        options={{
+          headerStyle: { backgroundColor: colors.lightBlack },
+          headerTintColor: colors.white,
+          title: 'Restaurantes',
+          headerTitleAlign: 'center',
+          headerLeft: () => <></>,
+        }}
+      />
       <Stack.Screen
         options={({ navigation }: { navigation: any }) => ({
           title: "",

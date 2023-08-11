@@ -1,4 +1,5 @@
 import Restaurant from "@/models/Restaurant";
+import ICardDetails from "@/models/ICardDetails";
 import axios from "axios";
 
 const API = "https://8jcox47hg2.execute-api.us-east-2.amazonaws.com/dev";
@@ -9,11 +10,11 @@ export async function fetchData() {
   return response;
 }
 
-export async function fetchRestaurants(): Promise<Array<object>> {
+export async function fetchRestaurants(): Promise<Array<ICardDetails>> {
   const response = await axios.get(API);
   const data = response.data.body.restaurants;
 
-  const restaurants: Array<object> = [];
+  const restaurants: Array<ICardDetails> = [];
 
   data.map((restaurant: Restaurant) => {
     const restaurantObj = {
