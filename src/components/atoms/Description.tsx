@@ -7,7 +7,7 @@ function Description({ children }: { children: any }) {
       <Text style={styles.text}>{children}</Text>
     </View>
   );
-}
+} 
 
 const styles = StyleSheet.create({
   container: {},
