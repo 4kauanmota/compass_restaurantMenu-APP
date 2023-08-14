@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         marginRight: 20,
         marginTop: 15,
         marginBottom: 15,
-        height: 150,
+        height: 140,
         flexDirection: 'row',
         justifyContent: 'center',
         ...Platform.select({
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: "bold",
         position: 'absolute',
-        bottom: 24,
+        bottom: 15,
         left: 14,
         right: 80,
         textAlign: "left",

@@ -22,14 +22,17 @@ function StackNavigation() {
         contentStyle: { backgroundColor: colors.gray },
       }}
     >
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Home" component={Home} 
+      options={{
+        headerTitle: '',
+        headerTransparent: true,
+      }}/>
       <Stack.Screen name="Restaurant" component={Restaurant} 
         options={{
           headerStyle: { backgroundColor: colors.lightBlack },
           headerTintColor: colors.white,
           title: 'Restaurantes',
           headerTitleAlign: 'center',
-          headerLeft: () => <></>,
         }}
       />
       <Stack.Screen
