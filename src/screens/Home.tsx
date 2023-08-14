@@ -5,22 +5,20 @@ import colors from "@/constants/colors";
 
 function Home({navigation}: {navigation: any}) {
   return(
-     
-      
-        <ImageBackground source={require('../../assets/img/background.png')} resizeMode="cover" style={styles.container}>
-          <LinearGradient style={styles.container} colors={gradient}>
+    <ImageBackground source={require('../../assets/img/background.png')} resizeMode="cover" style={styles.container}>
+      <LinearGradient style={styles.container} colors={gradient}>
 
-            <View style={styles.textContainer}>
-              <Text style={styles.homeTitle}>FIND D BEST</Text>
-              <Text style={styles.homeSubtitle}>Restaurant</Text>
-            </View> 
-            
-            <PressArea style={styles.button} pressStyle={styles.buttonPress} onPress={() => navigation.replace('Restaurant')}> 
-              <Text style={styles.buttonText} > Acessar </Text>  
-            </PressArea>
-          
-          </LinearGradient> 
-        </ImageBackground>
+        <View style={styles.textContainer}>
+          <Text style={styles.homeTitle}>FIND D BEST</Text>
+          <Text style={styles.homeSubtitle}>Restaurant</Text>
+        </View> 
+        
+        <PressArea style={styles.button} pressStyle={styles.buttonPress} onPress={() => navigation.replace('Restaurant')}> 
+          <Text style={styles.buttonText} > Acessar </Text>  
+        </PressArea>
+      
+      </LinearGradient> 
+    </ImageBackground>
   )
 }
 
