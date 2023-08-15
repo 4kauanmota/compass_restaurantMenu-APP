@@ -48,7 +48,7 @@ In the project folder terminal you should enter `npm install` or `npm i` to inst
 [![npm.png](https://i.postimg.cc/MKhF4KJ8/npm.png)](https://postimg.cc/crBhtWJD)
 
 #### Running project
-To run the project you just need to enter `npm start`
+To run the project you just need to enter `npm start` or `npm run start`
 
 [![expo.png](https://i.postimg.cc/Pqm30bTR/expo.png)](https://postimg.cc/HJk9yyJw)
 
