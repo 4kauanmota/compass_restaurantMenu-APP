@@ -62,12 +62,12 @@ Then you can open the project using [EXPO GO](https://expo.dev/client) app to re
 ![Preview Mobile Vertical](https://i.postimg.cc/Fzd87XFQ/mv.gif)
 
 ### Mobile Horizontal
-![Preview Mobile Horizontal]()
+![Preview Mobile Horizontal](https://i.postimg.cc/rphQ2ZGX/mh.gif)
 
 ---
 
 # 📝 **Authors**
-[Bruno Henrique Abido](https://github.com/BrunoAbido)
-[Caue Catone Silva](https://github.com/cauesilva1)
-[Dyenifer Thais Frazao da Silva](https://github.com/iShellyX)
+[Bruno Henrique Abido](https://github.com/BrunoAbido) <br>
+[Caue Catone Silva](https://github.com/cauesilva1) <br>
+[Dyenifer Thais Frazao da Silva](https://github.com/iShellyX) <br>
 [Kauan Soares Mota](https://github.com/4kauanmota)
