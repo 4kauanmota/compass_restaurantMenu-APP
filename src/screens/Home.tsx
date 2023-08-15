@@ -14,7 +14,7 @@ function Home({navigation}: {navigation: any}) {
         </View> 
         
         <PressArea style={styles.button} pressStyle={styles.buttonPress} onPress={() => navigation.replace('Restaurant')}> 
-          <Text style={styles.buttonText} > Acessar </Text>  
+          <Text style={styles.buttonText} > Acess </Text>  
         </PressArea>
       
       </LinearGradient> 

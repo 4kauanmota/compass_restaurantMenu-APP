@@ -11,7 +11,6 @@ type DetailScreenRouteProp = NativeStackScreenProps<RootStackParamList, 'Restaur
 const RestaurantsScreen = ({navigation}:DetailScreenRouteProp) => {
   const [restaurants, setRestaurants] = useState<ICardDetails[]>([]);
 
-
   useEffect(() => {
     async function loadRestaurants() {
       const fetchedRestaurants = await fetchRestaurants();

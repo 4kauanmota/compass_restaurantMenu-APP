@@ -31,7 +31,6 @@ function StackNavigation() {
         options={{
           headerStyle: { backgroundColor: colors.lightBlack },
           headerTintColor: colors.white,
-          title: 'Restaurantes',
           headerTitleAlign: 'center',
         }}
       />

@@ -35,7 +35,7 @@ function RestaurantDetails({ route }: { route: any }) {
       <View style={styles.detailsContainer}>
         <View style={styles.detailsArea}>
           <RestaurantDescription
-            subTitle="Sobre o restaurante"
+            subTitle="About the restaurant"
             description={restaurant?.description}
           />
 
