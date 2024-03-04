@@ -1,4 +1,4 @@
-![Project Stars](https://img.shields.io/github/stars/4kauanmota/compass_restaurantMenu-APP?color=1e90ff) ![Project Commits Week](https://img.shields.io/github/commit-activity/w/4kauanmota/compass_restaurantMenu-APP?color=1e90ff)
+![Project Stars](https://img.shields.io/github/stars/4kauanmota/compass_restaurantMenu-APPP?color=1e90ff) ![Project Commits Week](https://img.shields.io/github/commit-activity/w/4kauanmota/compass_restaurantMenu-APPP?color=1e90ff)
 
 # 📄 **Informations**
 **This project was made for a [Compass UOL](https://compass.uol/en/home/) challenge, the topic is about create a navegation project.**
