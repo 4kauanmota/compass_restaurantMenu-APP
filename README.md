@@ -1,4 +1,4 @@
-![Project Stars](https://img.shields.io/github/stars/4kauanmota/compass_restaurantMenu?color=1e90ff) ![Project Commits Week](https://img.shields.io/github/commit-activity/w/4kauanmota/compass_restaurantMenu?color=1e90ff)
+![Project Stars](https://img.shields.io/github/stars/4kauanmota/compass_restaurantMenu-APP?color=1e90ff) ![Project Commits Week](https://img.shields.io/github/commit-activity/w/4kauanmota/compass_restaurantMenu-APP?color=1e90ff)
 
 # 📄 **Informations**
 **This project was made for a [Compass UOL](https://compass.uol/en/home/) challenge, the topic is about create a navegation project.**
@@ -33,12 +33,12 @@
 + [EXPO](https://expo.dev/client) or [ANDROID STUDIO](https://developer.android.com/studio)
 
 ### Codes
-+ `git clone https://github.com/4kauanmota/compass_restaurantMenu.git .`
++ `git clone https://github.com/4kauanmota/compass_restaurantMenu-APP.git .`
 + `npm install` or `npm i`
 + `npm run start` or `npm start`
 
 #### Cloning project
-First you will need to open the terminal in the folder where you want to clone this project, and then, you paste this code `git clone https://github.com/4kauanmota/compass_restaurantMenu.git .`
+First you will need to open the terminal in the folder where you want to clone this project, and then, you paste this code `git clone https://github.com/4kauanmota/compass_restaurantMenu-APP.git .`
 
 [![git.png](https://i.postimg.cc/BZ7yTBhb/git.png)](https://postimg.cc/py8qxzMM)
 
